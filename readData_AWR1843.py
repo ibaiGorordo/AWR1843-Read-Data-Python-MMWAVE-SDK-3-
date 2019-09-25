@@ -96,7 +96,7 @@ def parseConfigFile(configFileName):
 # ------------------------------------------------------------------
 
 # Funtion to read and parse the incoming data
-def readAndParseData14xx(Dataport, configParameters):
+def readAndParseData18xx(Dataport, configParameters):
     global byteBuffer, byteBufferLength
     
     # Constants

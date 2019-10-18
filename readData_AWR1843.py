@@ -5,7 +5,7 @@ import pyqtgraph as pg
 from pyqtgraph.Qt import QtGui
 
 # Change the configuration file name
-configFileName = 'AWR1843config3D.cfg'
+configFileName = 'AWR1843config.cfg'
 
 CLIport = {}
 Dataport = {}
@@ -252,7 +252,7 @@ def update():
     y = []
       
     # Read and parse the received data
-    dataOk, frameNumber, detObj = readAndParseData14xx(Dataport, configParameters)
+    dataOk, frameNumber, detObj = readAndParseData18xx(Dataport, configParameters)
     
     if dataOk:
         #print(detObj)

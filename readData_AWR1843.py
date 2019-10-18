@@ -224,12 +224,10 @@ def readAndParseData18xx(Dataport, configParameters):
                 detObj = {"numObj": numDetectedObj, "x": x, "y": y, "z": z, "velocity":velocity}
                 dataOK = 1
                 
-            else:
-                idX += tlv_length
  
         # Remove already processed data
         if idX > 0 and byteBufferLength>idX:
-            shiftSize = idX
+            shiftSize = totalPacketLen
             
                 
             byteBuffer[:byteBufferLength - shiftSize] = byteBuffer[shiftSize:byteBufferLength]

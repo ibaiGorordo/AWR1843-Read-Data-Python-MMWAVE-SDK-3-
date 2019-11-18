@@ -162,7 +162,7 @@ function [dataOk, frameNumber, detObj] = readAndParseData18XX(DATA_sphandle, Con
         end
         %Remove processed data
         if idx > 0
-            shiftSize = idx;
+            shiftSize = Header.totalPacketLen;
             byteBuffer(1: byteBufferLength-shiftSize) = byteBuffer(shiftSize+1:byteBufferLength);
             byteBufferLength = byteBufferLength - shiftSize;
             if byteBufferLength < 0

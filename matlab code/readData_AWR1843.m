@@ -50,9 +50,9 @@ while (myInd <= N)
         
         % Plot the radar points
         h.XData = -detObj.x;
-        h.YData = -detObj.y;
+        h.YData = detObj.y;
         drawnow limitrate;
-        
+        pause(0.05);
                
         myInd = myInd + 1;     
     end
